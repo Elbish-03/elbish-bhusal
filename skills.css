@@ -1,0 +1,326 @@
+#skills-sec {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    background-color: #16191b;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#skills-sec h1 {
+    font-family: "Arial", sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+    text-align: center;
+    margin-top: -80px;
+
+}
+
+
+#skills-sec span {
+    display: inline-block;
+    position: relative;
+}
+
+#skills-sec h1::before,
+#skills-sec h1::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+#skills-sec h1::before {
+    left: -50%;
+}
+
+#skills-sec h1::after {
+    right: -50%;
+}
+
+
+.skill-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.skills-icons {
+    position: absolute;
+    top: 55%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.skills-icons-container {
+    width: 80%;
+    height: 80%;
+    animation: circleAnimation 30s linear infinite;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+
+}
+
+.skills-icons img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+}
+
+@keyframes circleAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+h1 {
+    text-align: center;
+}
+
+
+
+.skill h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.skill {
+    position: relative;
+    left: -400px;
+    width: 500px;
+    margin: 60px auto;
+    color: #fff;
+    padding: 20px;
+    list-style-type: none;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.skill li {
+    margin: 20px 0;
+    padding: 10px;
+
+
+}
+
+.bar {
+    background: #353b48;
+    display: block;
+    height: 20px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+}
+
+.bar:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.bar span {
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg,
+            rgba(236, 0, 140, 1) 0%,
+            rgba(252, 103, 103, 1) 100%);
+}
+
+.html {
+    width: 90%;
+    animation: html 3s;
+
+}
+
+.node {
+    width: 80%;
+    animation: node 3s;
+}
+
+.css {
+    width: 90%;
+    animation: css 3s;
+}
+
+.python {
+    width: 70%;
+    animation: python 3s;
+}
+
+.c-sharp {
+    width: 80%;
+    animation: c-sharp 3s;
+}
+
+@keyframes html {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes c-sharp {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+
+@keyframes node {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes css {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes python {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+
+
+@media only screen and (max-width: 1416px) {
+    #skills-sec {
+        justify-content: center;
+        align-items: center;
+        height: 180vh;
+    }
+
+    .skill {
+        left: 0;
+        margin: 100px auto 0 auto;
+    }
+
+    .skills-icons {
+        position: static;
+        transform: none;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .skills-icons-container {
+        width: 80%;
+        height: auto;
+        animation: none;
+        margin-bottom: 0;
+        animation: circleAnimation 30s linear infinite;
+
+    }
+
+    #skills-sec h1 {
+        font-family: "Arial", sans-serif;
+        font-size: 48px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+        position: relative;
+        text-align: center;
+        margin-top: 50px;
+
+    }
+
+
+    #skills-sec span {
+        display: inline-block;
+        position: relative;
+    }
+
+    #skills-sec h1::before,
+    #skills-sec h1::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+    }
+
+    #skills-sec h1::before {
+        left: -50%;
+    }
+
+    #skills-sec h1::after {
+        right: -50%;
+    }
+
+
+
+}

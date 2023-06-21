@@ -1,0 +1,401 @@
+#aboutme-sec {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-image: url("images/bg-timebeam.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 150px auto;
+
+}
+
+.tm-container {
+    padding: 10px 50px;
+    position: relative;
+    width: 50%;
+    display: flex;
+
+}
+
+.text-box {
+    padding: 20px 30px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+
+}
+
+.left-container {
+    left: -10%;
+}
+
+.right-container {
+    left: 52%;
+}
+
+
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #000;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 2;
+    animation: moveline 6s linear forwards;
+}
+
+
+
+.timeline .year-box-left {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background: #fff;
+    top: 50%;
+    left: calc(110% - 100px);
+    /* Adjust the left position to center the year box */
+    transform: translateY(-50%);
+    margin: auto;
+    z-index: 3;
+    border-radius: 40%;
+
+}
+
+.timeline .year-box-right {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background: #fff;
+    top: 50%;
+    left: calc(-3% - 50px);
+    /* Adjust the left position to center the year box */
+    transform: translateY(-50%);
+    margin: auto;
+    z-index: 3;
+    border-radius: 40%;
+}
+
+.timeline .year-box-left h3,
+.timeline .year-box-right h3 {
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+.timeline .year-box-right .alone {
+    padding-left: 30px;
+}
+
+
+@keyframes moveline {
+    0% {
+        height: 0;
+    }
+
+    100% {
+        height: 100%;
+    }
+}
+
+
+
+.text-box h2 {
+    font-weight: 600;
+}
+
+.text-box small {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.left-container-arrow {
+
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -15px;
+}
+
+.right-container-arrow {
+
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -15px;
+}
+
+
+
+@media only screen and (max-width: 1400px) {
+
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .right-container-arrow,
+    .left-container-arrow {
+        display: none;
+    }
+
+    .left-container {
+        position: relative;
+        left: auto;
+        margin-bottom: 50px;
+        z-index: 1;
+        margin-top: 50px;
+    }
+
+    .right-container {
+        position: relative;
+        left: auto;
+        margin-bottom: 50px;
+        z-index: 1;
+        margin-top: 50px;
+
+    }
+
+
+
+
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 100%;
+        background: #000;
+        top: 0;
+        left: 50%;
+        margin-left: -3px;
+        z-index: 0;
+        animation: moveline 6s linear forwards;
+    }
+
+    .timeline .year-box-left {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        background: #fff;
+        top: -10%;
+        left: calc(50% - 50px);
+        /* Adjust the left position to center the year box */
+        transform: translateY(-50%);
+        margin: auto;
+        z-index: 3;
+        border-radius: 40%;
+
+    }
+
+    .timeline .year-box-right {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        background: #fff;
+        top: -10%;
+        left: calc(50% - 50px);
+        /* Adjust the left position to center the year box */
+        transform: translateY(-50%);
+        margin: auto;
+        z-index: 3;
+        border-radius: 40%;
+    }
+
+    .timeline .year-box-left h3,
+    .timeline .year-box-right h3 {
+        font-size: 1rem;
+        padding-left: 10px;
+    }
+
+
+}
+
+
+
+
+
+/* About me Title */
+.about-me-title {
+    font-family: "Arial", sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: teal;
+    position: relative;
+    text-align: center;
+}
+
+.about-me-title span {
+    display: inline-block;
+    position: relative;
+}
+
+.about-me-title::before,
+.about-me-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 2px;
+    background-color: teal;
+}
+
+.about-me-title::before {
+    left: -50%;
+}
+
+.about-me-title::after {
+    right: -50%;
+}
+
+
+/* Footer */
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #cacdd2;
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+    margin: 0 10px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.socials a i {
+    font-size: 1.1rem;
+    width: 20px;
+    transition: color .4s ease;
+}
+
+.socials a:hover i {
+    color: aqua;
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100%;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom p a {
+    color: #44bae8;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+.footer-menu {
+    float: right;
+}
+
+.footer-menu ul {
+    display: flex;
+}
+
+.footer-menu ul li {
+    padding-right: 10px;
+    display: block;
+}
+
+.footer-menu ul li a {
+    color: #cfd2d6;
+    text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+    color: #27bcda;
+}
+
+@media (max-width:500px) {
+    .footer-menu ul {
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
